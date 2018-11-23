@@ -1,4 +1,4 @@
-#include "Psychic.h"
+#include "Theurge.h"
 #include "Rad.h"
 #include "Actor.h"
 #include "Item.h"
@@ -7,54 +7,54 @@
 
 // Constructors:
 
-Psychic::Psychic(Rad *t, Actor* a)
+Theurge::Theurge(Rad *t, Actor* a)
 	:Character(t, a)
 {
 }
 
-Psychic::~Psychic()
+Theurge::~Theurge()
 {
 }
 
 // Getters:
 
-string Psychic::getRole() {
-	return "Psychic";
+string Theurge::getRole() {
+	return "Theurge";
 }
 
-int Psychic::getBAB() {
+int Theurge::getBAB() {
 	return (int)floor((1 / (float)2) * (float)calculateLevel());
 }
 
-int Psychic::getHitDie() {
+int Theurge::getHitDie() {
 	return 6;
 }
 
-int Psychic::getFortitude() {
+int Theurge::getFortitude() {
 	return 0 + (int)floor((1 / (float)3) * (float)calculateLevel()) + rad->calculateModifier(getConstitution());
 }
 
-int Psychic::getReflex() {
+int Theurge::getReflex() {
 	return 0 + (int)floor((1 / (float)3) * (float)calculateLevel()) + rad->calculateModifier(getDexterity());
 }
 
-int Psychic::getWill() {
+int Theurge::getWill() {
 	return 2 + (int)floor((2 / (float)3) * (float)calculateLevel()) + rad->calculateModifier(getWisdom());
 }
 
-string Psychic::getMainAbility1() {
+string Theurge::getMainAbility1() {
 	return "cha";
 }
 
-string Psychic::getMainAbility2() {
+string Theurge::getMainAbility2() {
 	return "wis";
 }
 
-string Psychic::getMainAbility3() {
+string Theurge::getMainAbility3() {
 	return "con";
 }
 
-void Psychic::initializeItems()
+void Theurge::initializeItems()
 {
 	items.push_back(new Armor(rad, ITEM_ARMOR, 1, "Coveralls", 0, true, true, 1, 10, -0, 0));
 	items.push_back(new Weapon(rad, ITEM_WEAPON, 1, "Worn Pistol", 0, true, true, true, 20, 1, 4, DAMAGE_PHYSICAL, AMMO_BULLET));

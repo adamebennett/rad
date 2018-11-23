@@ -4,7 +4,7 @@
 #include "Character.h"
 #include "Soldier.h"
 #include "Hacker.h"
-#include "Psychic.h"
+#include "Theurge.h"
 #include "Item.h"
 #include "Weapon.h"
 #include "Projectile.h"
@@ -497,7 +497,7 @@ void Rad::delay(int ms)
 			Sleep(ms);
 		#endif
 		#ifdef POSIX_DELAYS
-			usleep(ms);
+			usleep(ms*1000); // usleep takes microseconds
 		#endif
 	#endif
 }

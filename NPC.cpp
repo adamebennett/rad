@@ -4,7 +4,7 @@
 #include "Spell.h"
 #include "Soldier.h"
 #include "Hacker.h"
-#include "Psychic.h"
+#include "Theurge.h"
 
 #include <sstream>
 

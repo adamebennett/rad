@@ -4,7 +4,7 @@
 #include "Character.h"
 #include "Soldier.h"
 #include "Hacker.h"
-#include "Psychic.h"
+#include "Theurge.h"
 
 // Constructors and Destructors //
 
@@ -79,16 +79,16 @@ Character* MainMenu::getCharacterInformation(Rad* rad)
 	vector<string> roles;
 	roles.push_back("Soldier");
 	roles.push_back("Hacker");
-	roles.push_back("Psychic");
+	roles.push_back("Theurge");
 	int roleIndex = -1;
 	string prompt = string("Select a role:");
 	while (roleIndex == -1)
 	{
 		roleIndex = showMenu(prompt, roles, true);
 	}
-	if (roles[roleIndex] == "Psychic")
+	if (roles[roleIndex] == "Theurge")
 	{
-		character = new Psychic(rad, rad->getPlayer());
+		character = new Theurge(rad, rad->getPlayer());
 	}
 	else if (roles[roleIndex] == "Hacker")
 	{

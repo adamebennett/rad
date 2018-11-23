@@ -1,5 +1,5 @@
-#ifndef PSYCHIC_H
-#define PSYCHIC_H
+#ifndef THEURGE_H
+#define THEURGE_H
 
 #include "Character.h"
 
@@ -8,13 +8,13 @@ class Actor;
 
 using namespace std;
 
-class Psychic: public Character {
+class Theurge: public Character {
 		
 	// Constructors and Destructors //
 	
 	public:
-		Psychic(Rad*, Actor*);
-		~Psychic();
+		Theurge(Rad*, Actor*);
+		~Theurge();
 
 	// Getters:
 	

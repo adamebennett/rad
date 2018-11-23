@@ -1,6 +1,6 @@
 TILE_FILES = Tile.o SolidTile.o StoneTile.o WallTile.o StairTile.o
 ITEM_FILES = Item.o Armor.o Weapon.o
-ROLE_FILES = Soldier.o Hacker.o Psychic.o
+ROLE_FILES = Soldier.o Hacker.o Theurge.o
 OBJ_FILES = main.o Rad.o MainMenu.o Graphics.o Player.o NPC.o Hud.o Character.o Entity.o $(ITEM_FILES) ${ROLE_FILES} Spell.o Projectile.o Graphic.o miscFunctions.o $(TILE_FILES) TileMap.o Room.o
 LINK_OPTIONS = -lncurses
 
@@ -43,8 +43,8 @@ Soldier.o: Soldier.h Soldier.cpp
 Hacker.o: Hacker.h Hacker.cpp
 	g++ -c -g Hacker.cpp
 	
-Psychic.o: Psychic.h Psychic.cpp
-	g++ -c -g Psychic.cpp
+Theurge.o: Theurge.h Theurge.cpp
+	g++ -c -g Theurge.cpp
 	
 Entity.o: Entity.h Entity.cpp
 	g++ -c -g Entity.cpp
